@@ -3,14 +3,14 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Java Web Programming: Class List</title>
-<meta name="description" content="This is a JSP example that demonstrates how to output every Person in our Excel Spreadsheet to a web page.">
+<title>Unsorted Movies | The Website</title>
+<meta name="description" content="This is a JSP example that demonstrates how to output an Excel sheet of movies to a spreadsheet.">
 <%@ include file="includes/styles.jsp"%>
 </head>
 <body>
 <div class="container">
 	<div class="hero-unit">
-		<h1>Class List</h1>
+		<h1>Movie List - Unsorted</h1>
 	</div>
 	<%@ include file="includes/navigation.jsp" %>
 	<div class="container">
@@ -20,19 +20,18 @@
 				<p>Sorry, the list of movies is empty.</p>
 			</c:when>
 			<c:otherwise>
-				<c:forEach var="person" items="${movies}">
+				<c:forEach var="movies" items="${movies}">
 					<div class="span4">
-						<h2>${movie.title}</h2>
-						<p>Director: ${movie.direction}, Length: ${movie.lengthInMinutes}</p>
+						<h2 class="movieTitle">${movies.title}</h2>
+						<p class="movieDetails">Director: ${movies.director}</p>
+						<p class="movieDetails">Length: ${movies.lengthInMinutes} minutes</p>
 					</div>				
 				</c:forEach>
 			</c:otherwise>
 		</c:choose>
 	</div>
 	<%@ include file="includes/footer.jsp" %>
-	
 </div>
-
 <%@ include file="includes/scripts.jsp" %>
 </body>
 </html>

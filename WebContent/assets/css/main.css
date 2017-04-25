@@ -1,9 +1,51 @@
 /*!
- * JavaWebProgramming v1
+ * JavaWebProgramming Style
  *
- * Copyright 2013 George Andrews
+ * Copyright 2017 Drewry Pope
  * Licensed under the Apache License v2.0
  * http://www.apache.org/licenses/LICENSE-2.0
  *
  */
- .container {width:768px;}
+.container {
+	width:48em;
+	padding: 0.625em, 0, 0.625em, 0;
+}
+.movieDetails {
+	padding-left: 10%;
+}
+.movieTitle {
+	text-decoration: underline;
+	padding-left: 2.5%;
+}
+.post {
+ 	padding-top:5%;
+}
+
+body {
+	background-color: lightgrey;
+	border-style: dashed;
+	border-width: 0.625em;
+	border-color: dark-gray;
+	max-width: 37.5em;
+	margin: auto;
+	margin-top: 2em;
+	padding-bottom: 1.25em;
+}
+div {
+	align: center;
+	max-width: 31.25em;
+	margin-right: auto; margin-left: auto;
+}
+h1 {
+	text-align: center;
+}
+
+@media only screen and (max-width: 28em) {
+    body {
+        border-style: none;
+    }
+    .container{
+    	width: auto;
+    	padding: 0;
+    }
+}
