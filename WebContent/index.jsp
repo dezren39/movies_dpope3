@@ -2,7 +2,7 @@
 <html>
 <head>
 <title>Index | The Website</title>
-<meta name="description content="This is a servlet example that demonstrates
+<meta name="description" content="This is a servlet example that demonstrates
 	how to use IO to output the contents of an Excel spreadsheet to a web page.">
 <%@ include file="includes/styles.jsp" %>
 </head>

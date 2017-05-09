@@ -10,7 +10,7 @@
 <body>
 <div class="container">
 	<div class="hero-unit">
-		<h1>Movie List - Unsorted</h1>
+		<h1>Movie List</h1>
 	</div>
 	<%@ include file="includes/navigation.jsp" %>
 	<div class="container">
@@ -20,11 +20,11 @@
 				<p>Sorry, the list of movies is empty.</p>
 			</c:when>
 			<c:otherwise>
-				<c:forEach var="movies" items="${movies}">
+				<c:forEach var="movie" items="${movies}">
 					<div class="span4">
-						<h2 class="movieTitle">${movies.title}</h2>
-						<p class="movieDetails">Director: ${movies.director}</p>
-						<p class="movieDetails">Length: ${movies.lengthInMinutes} minutes</p>
+						<h2 class="movieTitle">${movie.title}</h2>
+						<p class="movieDetails">Director: ${movie.director}</p>
+						<p class="movieDetails">Length: ${movie.lengthInMinutes} minutes</p>
 					</div>				
 				</c:forEach>
 			</c:otherwise>

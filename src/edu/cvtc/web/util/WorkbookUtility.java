@@ -26,26 +26,20 @@ public class WorkbookUtility {
 	
 	public static final String INPUT_FILE = "/assets/spreadsheets/Movies.xlsx";
 	
-	public static List<Movie> retrieveMoviesFromWorkbook(final File inputFile) throws InvalidFormatException, IOException
-	{
+	public static List<Movie> retrieveMoviesFromWorkbook(final File inputFile) throws InvalidFormatException, IOException {
 		final List<Movie> movies = new ArrayList<>();
 		final Workbook workbook = WorkbookFactory.create(inputFile);
 		
 		final Sheet sheet = workbook.getSheetAt(0);
 		
-		for (final Row row : sheet)
-		{
+		for (final Row row : sheet) {
 			final String title = row.getCell(0).getStringCellValue();
 			final String director = row.getCell(1).getStringCellValue();
 			final int lengthInMinutes = (int)row.getCell(2).getNumericCellValue();
-			System.out.println(title);
 			final Movie movie = new Movie(title, director, lengthInMinutes);
 		
 			movies.add(movie);
 		}
 		return movies;
 	}
-	
-	
-	
 }
