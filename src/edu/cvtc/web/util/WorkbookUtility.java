@@ -3,7 +3,6 @@ package edu.cvtc.web.util;
  * 
  */
 
-
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -23,7 +22,6 @@ import edu.cvtc.web.model.Movie;
  */
 
 public class WorkbookUtility {
-	
 	public static final String INPUT_FILE = "/assets/spreadsheets/Movies.xlsx";
 	
 	public static List<Movie> retrieveMoviesFromWorkbook(final File inputFile) throws InvalidFormatException, IOException {

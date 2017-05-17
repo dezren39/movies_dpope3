@@ -7,8 +7,9 @@
  *
  */
 .container {
-	width:48em;
+	width:58em;
 	padding: 0.625em, 0, 0.625em, 0;
+	margin-top: 1em;
 }
 .movieDetails {
 	padding-left: 10%;
@@ -21,26 +22,29 @@
  	padding-top:5%;
 }
 
+#search {
+	margin-left: 40%
+}
 body {
 	background-color: lightgrey;
 	border-style: dashed;
 	border-width: 0.625em;
 	border-color: dark-gray;
-	max-width: 37.5em;
+	max-width: 57.5em;
 	margin: auto;
 	margin-top: 2em;
 	padding-bottom: 1.25em;
 }
 div {
 	align: center;
-	max-width: 31.25em;
+	max-width: 42.25em;
 	margin-right: auto; margin-left: auto;
 }
 h1 {
 	text-align: center;
 }
 
-@media only screen and (max-width: 28em) {
+@media only screen and (max-width: 36em) {
     body {
         border-style: none;
     }

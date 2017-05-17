@@ -3,7 +3,6 @@ package edu.cvtc.web.model;
  * 
  */
 
-
 import java.io.Serializable;
 
 /**
@@ -17,7 +16,7 @@ public class Movie implements Serializable {
 	 */
 	private String title;
 	private String director;
-	private int lengthInMinutes;
+	private Integer lengthInMinutes;
 	
 	public Movie() {
 	}
@@ -45,12 +44,11 @@ public class Movie implements Serializable {
 		this.director = director;
 	}
 
-	public int getLengthInMinutes() {
+	public Integer getLengthInMinutes() {
 		return lengthInMinutes;
 	}
 
 	public void setLengthInMinutes(int lengthInMinutes) {
 		this.lengthInMinutes = lengthInMinutes;
 	}
-	
 }

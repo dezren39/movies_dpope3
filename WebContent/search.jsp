@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
 <head>
-<title>Java Web Programming:Index</title>
+<title>Search | The Website</title>
 <meta name="description" content="This is a servlet example for a simple web page.">
 <%@ include file="includes/styles.jsp" %>
 </head>
@@ -14,10 +14,11 @@
 	<div class="container">
 		<form action="Search">
 			<label for="title"><strong>Search by title:</strong></label>
-			<input name="title">
-			
-			<input type="submit" value="Search!">
-			
+			<input name="title"><br>
+			<label for="director"><strong>Search by director:</strong></label>
+			<input name="director"><br>
+			<p>(Case Insensitive, Leave Field Blank for "Any")</p>
+			<input id="search" type="submit" value="Search!">
 		</form>
 	</div>
 	<%@ include file="includes/footer.jsp" %>
