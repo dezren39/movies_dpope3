@@ -19,9 +19,9 @@ import edu.cvtc.web.util.WorkbookUtility;
 
 public class MovieDaoImpl implements MovieDao {
 
-	private static final String DROP_TABLE_PERSON = "drop table if exists movie;";
-	private static final String CREATE_TABLE_PERSON = "create table movie(id integer primary key autoincrement, title text, director text, lengthInMinutes integer);";
-	private static final String	SELECT_ALL_FROM_PERSON = "select * from movie;"; 
+	private static final String DROP_TABLE_MOVIE = "drop table if exists movie;";
+	private static final String CREATE_TABLE_MOVIE = "create table movie(id integer primary key autoincrement, title text, director text, lengthInMinutes integer);";
+	private static final String SELECT_ALL_FROM_MOVIE = "select * from movie;"; 
 	
 	@Override
 	public void populate(final String filePath) throws MovieDaoException {
@@ -34,8 +34,8 @@ public class MovieDaoImpl implements MovieDao {
 			
 			statement.setQueryTimeout(DBUtility.TIMEOUT);
 			
-			statement.executeUpdate(DROP_TABLE_PERSON);
-			statement.executeUpdate(CREATE_TABLE_PERSON);
+			statement.executeUpdate(DROP_TABLE_MOVIE);
+			statement.executeUpdate(CREATE_TABLE_MOVIE);
 			
 			// Populate movie table using WorkbookUtility
 			final File inputFile = new File(filePath);
